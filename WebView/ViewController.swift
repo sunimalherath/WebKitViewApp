@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var addressTxtField: UITextField!
+    
+    @IBOutlet weak var webkitView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let startUrl = URL(string: "https://www.apple.com/au")
+        webkitView.load(URLRequest(url: startUrl!))
+        
     }
+    
+    @IBAction func goBtnWasPressed(_ sender: Any) {
+    }
+    
 
 
 }
